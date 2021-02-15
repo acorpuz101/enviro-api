@@ -30,9 +30,10 @@ def getStatus():
     dataPressure = bme280.get_pressure()
     dataHumidity = bme280.get_humidity()
     data = {
-        "temp": dataTemp,
-        "pressure": dataPressure,
-        "humidity": dataHumidity
+        "tempC": "{:.1f}".format(raw_temp),
+        "tempF": "{:.1f}".format(dataTemp),
+        "pressure": "{:.1f}".format(dataPressure),
+        "humidity": "{:.1f}".format(dataHumidity)
         }
     jsonData = json.dumps(data)
     return jsonData
