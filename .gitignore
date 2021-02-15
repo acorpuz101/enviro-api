@@ -1,3 +1,5 @@
 app.pyc
 .vs
 .idea
+logs.log
+shutdown.sh
